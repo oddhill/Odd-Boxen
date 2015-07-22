@@ -10,6 +10,7 @@ class oddhill::implementation::lamp {
   include solr
   include java
   include postfix
+  include openssl
 
   # Install php
   $php_version = '5.4.41'
