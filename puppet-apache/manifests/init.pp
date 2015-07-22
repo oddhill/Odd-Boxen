@@ -2,15 +2,6 @@ class apache {
 
   include apache::config
 
-  # Bring default plist under our control - taken from Mountain Lion 10.8.2
-
-  file { '/System/Library/LaunchDaemons/org.apache.httpd.plist':
-    content => template('apache/org.apache.httpd.plist.erb'),
-    group   => 'wheel',
-    notify  => Service['org.apache.httpd'],
-    owner   => 'root'
-  }
-
   # Set path to configs
   $httpd_conf_template = 'apache/config/apache/httpd.conf.erb'
   $httpd_ssl_conf_template = 'apache/config/apache/httpd-ssl.conf.erb'
