@@ -1,6 +1,6 @@
 # Odd Boxen
 
-Odd Boxen is a web development environment for Yosemite based on [GitHubs Boxen](http://boxen.github.com).
+Odd Boxen is a web development environment for OS X based on [GitHubs Boxen](http://boxen.github.com).
 
 This will automatically point any .dev domain to your locahost and enable dynamic virtual hosts for every folder in your ~/Sites folder. This means that you'll be able to setup a site by creating a folder, *example*, in your ~/Sites folder and access it from http://example.dev, or https://example.dev if you want to use a secure connection.
 
@@ -45,9 +45,9 @@ If you have any installations that are included within Odd Boxen, make sure that
 	xcode-select --install
 	```
 	This will ask for your password, and initiate the installation if needed. All you need to do is to follow the instructions.
-	
-	
-	
+
+
+
 2. Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12), and start Xcode in order to approve to the terms of use.
 
 
