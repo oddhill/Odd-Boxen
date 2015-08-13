@@ -37,7 +37,7 @@ class oddhill::implementation::lamp {
 
   # Symlink pkg-config to usr/local, fixes https://github.com/oddhill/oddboxen/issues/617
   exec {'link_pkg-config':
-    command => 'ln -s /opt/boxen/homebrew/bin/pkg-config /usr/local/bin/pkg-config',
+    command => 'mkdir -p /usr/local/bin && ln -s /opt/boxen/homebrew/bin/pkg-config /usr/local/bin/pkg-config',
     creates => '/usr/local/bin/pkg-config',
     require => Class['pkgconfig'],
     user => root
