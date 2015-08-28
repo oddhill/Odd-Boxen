@@ -31,7 +31,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.10.4)
+    boxen (3.11.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-brewcask
@@ -51,7 +51,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-gcc
   specs:
-    gcc (2.2.1)
+    gcc (3.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-git
@@ -71,7 +71,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (1.12.0)
+    homebrew (1.13.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
@@ -166,12 +166,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
-    inifile (1.2.0)
+    inifile (1.4.1)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
   specs:
-    stdlib (4.6.0)
+    stdlib (4.7.0)
 
 GITHUBTARBALL
   remote: ripienaar/puppet-module-data
@@ -181,19 +181,19 @@ GITHUBTARBALL
 DEPENDENCIES
   atom (= 1.2.0)
   autoconf (= 1.0.0)
-  boxen (= 3.10.4)
+  boxen (= 3.11.0)
   brewcask (= 0.0.6)
   dnsmasq (= 2.0.1)
   drush (= 1.1.1)
   foreman (= 1.2.0)
-  gcc (= 2.2.1)
+  gcc (= 3.0.2)
   git (= 2.7.92)
   go (= 2.1.0)
   heroku (= 2.0.0)
-  homebrew (= 1.12.0)
+  homebrew (= 1.13.0)
   hub (= 1.4.1)
   imagemagick (= 1.3.0)
-  inifile (= 1.2.0)
+  inifile (= 1.4.1)
   java (= 1.8.3)
   libpng (= 1.0.0)
   libtool (= 1.0.0)
@@ -210,7 +210,7 @@ DEPENDENCIES
   puppet-solr (>= 0)
   repository (= 2.4.1)
   ruby (= 8.5.2)
-  stdlib (= 4.6.0)
+  stdlib (= 4.7.0)
   sudo (= 1.0.0)
   tower (= 1.1.0)
   wget (= 1.0.1)
