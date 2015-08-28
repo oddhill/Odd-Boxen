@@ -101,7 +101,15 @@ If you have any installations that are included within Odd Boxen, make sure that
 	```
 	Then restart your shell, and try to run `boxen --env` again.
 
+## Install apps
+There is now a way to easily install some common applications via boxen through `brewcask`.
 
+```shell
+$ boxen dev-apps
+$ boxen common-apps
+```
+[https://github.com/oddhill/oddboxen/blob/master/modules/projects/manifests/dev-apps.pp](List of dev-apps)
+[https://github.com/oddhill/oddboxen/blob/master/modules/projects/manifests/common-apps.pp](List of common-apps)
 
 ## Updating
 
