@@ -19,6 +19,11 @@ PATH
     puppet-solr (0.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-atom
+  specs:
+    atom (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-autoconf
   specs:
     autoconf (1.0.0)
@@ -129,6 +134,11 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-tower
+  specs:
+    tower (1.1.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-wget
   specs:
     wget (1.0.1)
@@ -169,6 +179,7 @@ GITHUBTARBALL
     module_data (0.0.4)
 
 DEPENDENCIES
+  atom (= 1.2.0)
   autoconf (= 1.0.0)
   boxen (= 3.10.4)
   brewcask (= 0.0.6)
@@ -201,6 +212,7 @@ DEPENDENCIES
   ruby (= 8.5.2)
   stdlib (= 4.6.0)
   sudo (= 1.0.0)
+  tower (= 1.1.0)
   wget (= 1.0.1)
   xquartz (= 1.2.1)
 
