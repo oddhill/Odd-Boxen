@@ -108,8 +108,8 @@ There is now a way to easily install some common applications via boxen through 
 $ boxen dev-apps
 $ boxen common-apps
 ```
-[https://github.com/oddhill/oddboxen/blob/master/modules/projects/manifests/dev-apps.pp](List of dev-apps)
-[https://github.com/oddhill/oddboxen/blob/master/modules/projects/manifests/common-apps.pp](List of common-apps)
+[List of dev-apps](https://github.com/oddhill/oddboxen/blob/master/modules/projects/manifests/dev-apps.pp)
+[List of common-apps](https://github.com/oddhill/oddboxen/blob/master/modules/projects/manifests/common-apps.pp)
 
 ## Updating
 
