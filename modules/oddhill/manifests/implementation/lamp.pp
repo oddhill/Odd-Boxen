@@ -59,7 +59,8 @@ class oddhill::implementation::lamp {
 
   # Install drush
   class { 'drush':
-    version => '7.0.0'
+    version => '7.0.0',
+    require => Php::Version[$php_version]
   }
 
   drush::plugin {'drush-registry-rebuild':
