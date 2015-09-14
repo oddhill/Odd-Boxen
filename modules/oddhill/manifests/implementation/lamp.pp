@@ -35,18 +35,18 @@ class oddhill::implementation::lamp {
     require => Php::Version[$php_version]
   }
 
-  # Symlink pkg-config to usr/local, fixes https://github.com/oddhill/oddboxen/issues/617
-  exec {'link_pkg-config':
-    command => 'mkdir -p /usr/local/bin && ln -s /opt/boxen/homebrew/bin/pkg-config /usr/local/bin/pkg-config',
-    creates => '/usr/local/bin/pkg-config',
-    require => Class['pkgconfig'],
-    user => root
+  # Symlink pkg-config to usr/local
+  # fixes https://github.com/oddhill/oddboxen/issues/617
+  file {'/usr/local/bin/pkg-config':
+    ensure => 'link',
+    target => '/opt/boxen/homebrew/bin/pkg-config',
+    require => Class['pkgconfig']
   }
 
   php::extension::imagick { "imagick for {$php_version}":
     php => $php_version,
     version => '3.1.2',
-    require => [Php::Version[$php_version], Exec['link_pkg-config']]
+    require => [Php::Version[$php_version], File['/usr/local/bin/pkg-config']]
   }
 
   # Make sure php is not installed from homebrew
