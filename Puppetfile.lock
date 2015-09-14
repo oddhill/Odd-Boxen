@@ -161,7 +161,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: oddhill/puppet-php
   specs:
-    php (2.3.1)
+    php (2.3.2)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
@@ -202,7 +202,7 @@ DEPENDENCIES
   nodejs (= 4.0.1)
   openssl (= 1.0.0)
   pcre (= 1.0.0)
-  php (= 2.3.1)
+  php (= 2.3.2)
   pkgconfig (= 1.0.0)
   puppet-apache (>= 0)
   puppet-mysql (>= 0)
