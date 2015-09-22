@@ -156,7 +156,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: jenslind/puppet-mongodb
   specs:
-    mongodb (3.0.4)
+    mongodb (3.0.6)
 
 GITHUBTARBALL
   remote: oddhill/puppet-php
@@ -198,7 +198,7 @@ DEPENDENCIES
   libpng (= 1.0.0)
   libtool (= 1.0.0)
   module_data (= 0.0.4)
-  mongodb (= 3.0.4)
+  mongodb (= 3.0.6)
   nodejs (= 5.0.4)
   openssl (= 1.0.0)
   pcre (= 1.0.0)
