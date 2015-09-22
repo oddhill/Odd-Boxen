@@ -37,10 +37,14 @@ class oddhill::implementation::lamp {
 
   # Symlink pkg-config to usr/local
   # fixes https://github.com/oddhill/oddboxen/issues/617
+  file {'/usr/local/bin':
+    ensure => 'directory'
+  }
+
   file {'/usr/local/bin/pkg-config':
     ensure => 'link',
     target => '/opt/boxen/homebrew/bin/pkg-config',
-    require => Class['pkgconfig']
+    require => [File['/usr/local/bin'], Class['pkgconfig']]
   }
 
   php::extension::imagick { "imagick for {$php_version}":
