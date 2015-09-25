@@ -134,11 +134,6 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-tower
-  specs:
-    tower (1.1.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-wget
   specs:
     wget (1.0.1)
@@ -212,7 +207,6 @@ DEPENDENCIES
   ruby (= 8.5.2)
   stdlib (= 4.7.0)
   sudo (= 1.0.0)
-  tower (= 1.1.0)
   wget (= 1.0.1)
   xquartz (= 1.2.1)
 
