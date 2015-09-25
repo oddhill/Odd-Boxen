@@ -7,5 +7,4 @@ class projects::common-apps {
   package { 'slack': provider => 'brewcask' }
   package { 'harvest': provider => 'brewcask' }
   package { '1password': provider => 'brewcask' }
-  package { 'littleipsum': provider => 'brewcask' }
 }
