@@ -83,8 +83,17 @@ If you have any installations that are included within Odd Boxen, make sure that
 
 6. Install Odd Boxen:
 
+   ```shell
+   $ script/boxen
    ```
-   script/boxen
+
+   To include specific project manifests:
+   ```shell
+   # To install specific things that you need when developing with Drupal.
+   $ script/boxen lamp
+
+   # To install things you need when developing mean apps.
+   $ script/boxen mean
    ```
 
    Expect this to take a while.

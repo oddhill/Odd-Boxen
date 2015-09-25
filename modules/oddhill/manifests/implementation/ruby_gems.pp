@@ -1,8 +1,4 @@
 class oddhill::implementation::ruby_gems {
-  class { 'ruby::global':
-    version => '2.1.1'
-  }
-
   ruby_gem { 'sass':
     gem     => 'sass',
     version => '3.4.14',

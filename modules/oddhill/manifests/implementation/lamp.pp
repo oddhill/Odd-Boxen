@@ -1,4 +1,9 @@
 class oddhill::implementation::lamp {
+  # Install ruby gems and node modules that
+  # are used when developing with Drupal
+  include oddhill::implementation::ruby_gems
+  include oddhill::implementation::node_modules
+
   include apache
   include wget
   include autoconf
