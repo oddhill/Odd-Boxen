@@ -4,7 +4,6 @@ Odd Boxen is a web development environment for OS X based on [GitHubs Boxen](htt
 
 This will automatically point any .dev domain to your locahost and enable dynamic virtual hosts for every folder in your ~/Sites folder. This means that you'll be able to setup a site by creating a folder, *example*, in your ~/Sites folder and access it from http://example.dev, or https://example.dev if you want to use a secure connection.
 
-
 ## What's included?
 
 This is a list that points out the most relevant parts for this development environment. For a full list and further information, please refer to the repository for [our-boxen](https://github.com/boxen/our-boxen).
@@ -17,6 +16,7 @@ This is a list that points out the most relevant parts for this development envi
 * Git
 * Node.js
   * Grunt CLI
+  * Gulp
   * Bower
   * Yeoman
   * JSHint
@@ -84,22 +84,14 @@ If you have any installations that are included within Odd Boxen, make sure that
 6. Install Odd Boxen:
 
    ```shell
-   $ script/boxen
-   ```
-
-   To include specific project manifests:
-   ```shell
-   # To install specific things that you need when developing with Drupal.
-   $ script/boxen lamp
+   # Install lamp
+   script/boxen lamp
 
    # To install things you need when developing mean apps.
-   $ script/boxen mean
+   script/boxen mean
    ```
 
    Expect this to take a while.
-
-
-
 
 7. When you're back at the prompt, restart the shell, and you should be able to run `boxen --env`. This will display the current status of the environment.
 
@@ -111,11 +103,11 @@ If you have any installations that are included within Odd Boxen, make sure that
 	Then restart your shell, and try to run `boxen --env` again.
 
 ## Install apps
-There is now a way to easily install some common applications via boxen through `brewcask`.
+Install some common applications via boxen through `brewcask`.
 
 ```shell
-$ boxen dev-apps
-$ boxen common-apps
+boxen dev-apps
+boxen common-apps
 ```
 [List of dev-apps](https://github.com/oddhill/oddboxen/blob/master/modules/projects/manifests/dev-apps.pp)    
 [List of common-apps](https://github.com/oddhill/oddboxen/blob/master/modules/projects/manifests/common-apps.pp)
@@ -126,14 +118,10 @@ $ boxen common-apps
 
 2. Run `boxen` from the terminal. This will automatically pull the latest changes from this repository, and perform any required alterations.
 
-
-
 ## Known issues
 
 * Please check the [issue queue](https://github.com/oddhill/oddboxen/issues) for known issues.
 * If you experience any problems please [file an issue](https://github.com/oddhill/oddboxen/issues/new). Make sure to read the [Troubleshooting](#troubleshooting) section first though, as this may solve your problems.
-
-
 
 ## Troubleshooting
 
@@ -144,3 +132,11 @@ $ boxen common-apps
 * Make sure that Xcode is updated. Check the App Store for available updates.
 
 * Run `xcode-select --install` in order to update Xcode Command Line Tools.
+
+## Upgrading from 10.10 to 10.11
+
+After upgrading to 10.11 you need to do the following to get boxen working:
+
+1. Make sure `command line tools` is up to date. Check app store for updates.
+2. Install bundler `cd /opt/boxen/repo && sudo gem install bundler`
+3. Run `boxen lamp` to fix the Apache configs.
