@@ -1,0 +1,2 @@
+---
+php::config::secure_warning: false

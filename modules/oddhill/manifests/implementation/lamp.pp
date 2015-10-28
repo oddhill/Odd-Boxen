@@ -18,7 +18,7 @@ class oddhill::implementation::lamp {
   include openssl
 
   # Install php
-  $php_version = '5.4.41'
+  $php_version = '5.5.9'
 
   php::version { $php_version:
     ensure => present
