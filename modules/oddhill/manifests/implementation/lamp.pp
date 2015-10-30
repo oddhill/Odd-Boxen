@@ -68,7 +68,7 @@ class oddhill::implementation::lamp {
 
   # Install drush
   class { 'drush':
-    version => '7.0.0',
+    version => '8.0.0-rc2',
     require => Php::Version[$php_version]
   }
 
