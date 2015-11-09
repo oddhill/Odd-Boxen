@@ -17,6 +17,11 @@ class oddhill::implementation::lamp {
   include postfix
   include openssl
 
+  # Install curl
+  package { 'curl':
+    ensure => 'present'
+  }
+
   # Install php
   $php_version = '5.5.9'
 
