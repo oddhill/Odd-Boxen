@@ -63,6 +63,11 @@ class oddhill::implementation::lamp {
     require => [Php::Version[$php_version], File['/usr/local/bin/pkg-config']]
   }
 
+  php::extension::xhprof { "xhprof for {$php_version}":
+    php => $php_version,
+    require => [Php::Version[$php_version]]
+  }
+
   # Make sure php is not installed from homebrew
   package {
     'php53':
