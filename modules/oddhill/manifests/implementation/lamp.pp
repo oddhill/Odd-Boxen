@@ -19,7 +19,11 @@ class oddhill::implementation::lamp {
 
   # Install curl
   package { 'curl':
-    ensure => 'present'
+    ensure => 'present',
+    install_options => [
+      '--with-openssl',
+    ],
+    require => Package['openssl'],
   }
 
   # Install php
