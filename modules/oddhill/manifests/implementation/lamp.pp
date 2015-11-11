@@ -26,6 +26,11 @@ class oddhill::implementation::lamp {
     require => Package['openssl'],
   }
 
+  # Install libxml2
+  package { 'libxml2':
+    ensure => 'present',
+  }
+
   # Install php
   $php_version = '5.5.9'
 
