@@ -91,4 +91,17 @@ class solr {
     group   => wheel,
     require => Package['boxen/brews/solr']
   }
+
+  # Service stuff
+
+  file { '/Library/LaunchDaemons/dev.solr.plist':
+    content => template('solr/dev.solr.plist.erb'),
+    group   => 'wheel',
+    notify  => Service['dev.solr'],
+    owner   => 'root'
+  }
+
+  service { 'dev.solr':
+    ensure  => running
+  }
 }
