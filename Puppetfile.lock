@@ -31,7 +31,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.11.0)
+    boxen (3.11.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-brewcask
@@ -126,7 +126,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (8.5.2)
+    ruby (8.5.3)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -176,7 +176,7 @@ GITHUBTARBALL
 DEPENDENCIES
   atom (= 1.2.0)
   autoconf (= 1.0.0)
-  boxen (= 3.11.0)
+  boxen (= 3.11.1)
   brewcask (= 0.0.6)
   dnsmasq (= 2.0.1)
   drush (= 1.1.1)
@@ -204,7 +204,7 @@ DEPENDENCIES
   puppet-postfix (>= 0)
   puppet-solr (>= 0)
   repository (= 2.4.1)
-  ruby (= 8.5.2)
+  ruby (= 8.5.3)
   stdlib (= 4.7.0)
   sudo (= 1.0.0)
   wget (= 1.0.1)
