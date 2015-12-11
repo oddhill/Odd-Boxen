@@ -62,7 +62,20 @@ class apache {
     group   => wheel
   }
 
+  # Service stuff
+
+  file { '/Library/LaunchDaemons/dev.apache.plist':
+    content => template('apache/dev.apache.plist.erb'),
+    group   => 'wheel',
+    notify  => Service['dev.apache'],
+    owner   => 'root'
+  }
+
   service { "org.apache.httpd":
+    ensure => stopped
+  }
+
+  service { "dev.apache":
     ensure => running,
     require => File[$apache::config::configfile]
   }
