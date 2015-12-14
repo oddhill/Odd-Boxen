@@ -1,5 +1,5 @@
 class oddhill::implementation::ruby_gems {
-  $version = '2.1.2'
+  $version = '2.2.3'
 
   ruby_gem { 'sass':
     gem             => 'sass',
