@@ -77,6 +77,12 @@ class oddhill::implementation::lamp {
     require => [Php::Version[$php_version]]
   }
 
+  php::extension::xdebug { "xdebug for {$php_version}":
+    php => $php_version,
+    version => '2.3.3',
+    require => [Php::Version[$php_version]]
+  }
+
   # Make sure php is not installed from homebrew
   package {
     'php53':
