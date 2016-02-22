@@ -1,3 +1,3 @@
 ---
 php::config::secure_warning: false
-nodejs::build::ensure: 'c5fac71ef20a85841c7fd76f751ed11e2f8625ec'
+nodejs::build::ensure: '8657f17c9f6769eaa80512cac90b07aeeeaf261a'

@@ -58,11 +58,11 @@ node default {
   include hub
 
   # node versions
-  nodejs::version { '4.2.2': }
+  nodejs::version { '4.3.0': }
 
   # Set default global version
   class { 'nodejs::global':
-    version => '4.2.2'
+    version => '4.3.0'
   }
 
   # default ruby versions
