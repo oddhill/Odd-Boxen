@@ -3,7 +3,6 @@
 class postfix {
 
   include postfix::config
-  include postfix::mandrill
 
   file { $postfix::config::mainfile:
     content => template('postfix/main.cf.erb'),
@@ -11,28 +10,12 @@ class postfix {
     owner   => 'root',
     notify  => Exec['restart postfix'],
   }
-  
-  file { $postfix::mandrill::saslfile:
-    content => template('postfix/sasl_passwd.erb'),
-    group   => 'wheel',
-    owner   => 'root',
-    mode    => 600,
-    notify  => Exec['postmap sasl_passwd'],
-  }
-  
+
   exec { 'restart postfix' :
-    command => 'postfix stop && postfix start',
+    command => 'postfix status && postfix stop && postfix start || postfix start',
     cwd => '/usr/sbin',
     user => 'root',
     refreshonly => true,
-  }
-  
-  exec { 'postmap sasl_passwd' :
-    command => 'postmap /etc/postfix/sasl_passwd',
-    cwd => '/usr/sbin',
-    user => 'root',
-    refreshonly => true,
-    notify  => Exec['restart postfix'],
   }
 
 }

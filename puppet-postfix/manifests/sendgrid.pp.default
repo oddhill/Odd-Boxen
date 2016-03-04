@@ -1,0 +1,8 @@
+# Authentication credentials for Sendgrid.
+
+class postfix::sendgrid {
+
+  $username = ''
+  $password = ''
+
+}

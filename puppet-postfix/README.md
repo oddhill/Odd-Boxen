@@ -1,9 +1,9 @@
 # Postfix Module for Boxen
 
-A small module that configures Postfix for use with Mandrill.
+A small module that configures Postfix for use with Sendgrid.
 
 ## Usage
-Copy the manifests/mandrill.pp.default to manifests/mandrill.pp. Enter your Mandrill credentials in the new file.
+Copy the manifests/sendgrid.pp.default to manifests/sendgrid.pp. Enter your Sendgrid credentials in the new file.
 
 Then simply:
 

@@ -2,15 +2,19 @@
 
 class postfix::config {
 
+  include postfix::sendgrid
+
   $mainfile = '/etc/postfix/main.cf'
 
-  # Send mail via Mandrill. See the documentation at
-  # http://help.mandrill.com/entries/23060367-Can-I-configure-Postfix-to-send-through-Mandrill-
+  # Send mail via Sendgrid. See the documentation at
+  # https://sendgrid.com/docs/Integrate/Mail_Servers/postfix.html
   # for further information.
+
   $smtp_sasl_auth_enable = 'yes'
-  $smtp_sasl_password_maps = 'hash:/etc/postfix/sasl_passwd'
+  $smtp_sasl_password_maps = "static:${postfix::sendgrid::username}:${postfix::sendgrid::password}"
   $smtp_sasl_security_options = 'noanonymous'
-  $smtp_use_tls = 'yes' 
-  $relayhost = '[smtp.mandrillapp.com]:587'
+  $smtp_tls_security_level = 'encrypt'
+  $header_size_limit = 4096000
+  $relayhost = '[smtp.sendgrid.net]:587'
 
 }

@@ -688,11 +688,12 @@ smtpd_tls_ciphers = medium
 inet_protocols = all
 inet_interfaces = all
 
-# Send mail via Mandrill. See the documentation at
-# http://help.mandrill.com/entries/23060367-Can-I-configure-Postfix-to-send-through-Mandrill-
+# Send mail via Sendgrid. See the documentation at
+# https://sendgrid.com/docs/Integrate/Mail_Servers/postfix.html
 # for further information.
 smtp_sasl_auth_enable = <%= scope.lookupvar "postfix::config::smtp_sasl_auth_enable" %>
 smtp_sasl_password_maps = <%= scope.lookupvar "postfix::config::smtp_sasl_password_maps" %>
 smtp_sasl_security_options = <%= scope.lookupvar "postfix::config::smtp_sasl_security_options" %>
-smtp_use_tls = <%= scope.lookupvar "postfix::config::smtp_use_tls" %>
+smtp_tls_security_level = <%= scope.lookupvar "postfix::config::smtp_tls_security_level" %>
+header_size_limit = <%= scope.lookupvar "postfix::config::header_size_limit" %>
 relayhost = <%= scope.lookupvar "postfix::config::relayhost" %>

@@ -28,7 +28,7 @@ This is a list that points out the most relevant parts for this development envi
 * Apache configuration
   * Dynamic document root
   * Support for HTTPS
-* Postfix relay for Mandrill
+* Postfix relay for Sendgrid
 
 
 ## Prerequisites
@@ -63,21 +63,21 @@ If you have any installations that are included within Odd Boxen, make sure that
 
 
 
-4. Create the Mandrill manifest:
+4. Create the Sendgrid manifest:
 
    ```
-   cp puppet-postfix/manifests/mandrill.pp.default puppet-postfix/manifests/mandrill.pp
+   cp puppet-postfix/manifests/sendgrid.pp.default puppet-postfix/manifests/sendgrid.pp
    ```
 
 
 
-5. Edit the Mandrill manifest with your favorite editor, e.g:
+5. Edit the Sendgrid manifest with your favorite editor, e.g:
 
    ```
-   pico puppet-postfix/manifests/mandrill.pp
+   pico puppet-postfix/manifests/sendgrid.pp
    ```
 
-   Enter the credentials for your [Mandrill account](https://mandrillapp.com).
+   Enter the credentials for your [Sendgrid account](https://sendgrid.com).
 
 
 
