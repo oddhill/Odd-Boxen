@@ -1,3 +1,9 @@
+# DEPRECATED
+
+This environment has been deprecated in favor for [Odd Environment](https://github.com/oddhill/oddenvironment). Why? Simply because we needed an environment which is easier to maintain, and Boxen contains a lot of additional stuff which we simply don't need.
+
+Head over to [the project page for Odd Environment](https://github.com/oddhill/oddenvironment) for migration instructions.
+
 # Odd Boxen
 
 Odd Boxen is a web development environment for OS X based on [GitHubs Boxen](http://boxen.github.com).
